@@ -8,8 +8,13 @@ function App() {
   return (
     <>
       <Header />
-      <div className="h-96" />
-      <div className="p-8 m-12 grid gap-4 items-center justify-between">
+
+      <div
+        className="p-8 m-12 grid gap-4
+      sm:grid-cols-1
+      md:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]
+      "
+      >
         <ProjectCard projectName="Plataforma de Streaming de Dados" tags={ ['Javascript', 'Tailwind', 'React'] } image={ projeto1 } />
         <ProjectCard projectName="Plataforma de Streaming de Dados" tags={ ['Javascript', 'Tailwind', 'React'] } image={ projeto1 } />
         <ProjectCard projectName="Plataforma de Streaming de Dados" tags={ ['Javascript', 'Tailwind', 'React'] } image={ projeto1 } />

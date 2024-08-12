@@ -10,7 +10,7 @@ type CardsProps = {
 function ProjectCard({ projectName, tags, slug, image }: CardsProps) {
   return (
     <div
-      className="rounded-2xl shadow-xl overflow-hidden max-w-xs h-100% bg-gray-600"
+      className="rounded-2xl shadow-xl overflow-hidden  h-100% bg-gray-600"
       name="conteiner-card"
     >
       <img
