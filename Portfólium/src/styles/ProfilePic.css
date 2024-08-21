@@ -1,0 +1,46 @@
+.fotoPerfil {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  mask-image: url(../assets/CIRCULO.png);
+  mask-size: 300px;
+  mask-repeat: no-repeat;
+  overflow: hidden; /* Garante que o conteúdo extra da imagem seja cortado */
+}
+
+.FotoPrincipalPerfil, .FotoFundoPerfil {
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta o ponto de origem para o centro */
+  height: 100%;
+}
+
+.FotoPrincipalPerfil {
+  z-index: 1;
+}
+
+.FotoFundoPerfil {
+  z-index: 0;
+  width: 900px; /* Aumenta a largura horizontal */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  animation: moveLeftRight 10s linear infinite;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translate(-50%, -50%) translateX(0); /* Posição inicial */
+  }
+  25% {
+    transform: translate(-50%, -50%) translateX(-15px); /* Move para a esquerda */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(15px); /* Move para a direita */
+  }
+  75% {
+    transform: translate(-50%, -50%) translateX(-15px); /* Move de volta para a esquerda */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(0); /* Retorna à posição inicial */
+  }
+}
