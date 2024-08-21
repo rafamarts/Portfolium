@@ -1,20 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom'; // Certifique-se de importar useLocation
 import ProfilePic from './ProfilePic';
 
 function Header() {
-// ---------------------(1)Muda cor do menu quando clicado---------------------//
+  const location = useLocation(); // useLocation para saber a URL atual
+
+  // ---------------------(1)Muda cor do menu quando clicado---------------------//
   const [linkActive, setLinkActive] = useState('');
-  const handleClick = (section) => (event) => {
-    event.preventDefault(); // Previne o comportamento padrão do link
-    setLinkActive(section);
-  };
+
+  useEffect(() => {
+    // Atualiza o estado sempre que a URL mudar
+    const path = location.pathname.replace('/', '');
+    setLinkActive(path);
+  }, [location.pathname]);
+
   // --------------------Fim Muda cor do menu quando clicado-------------------//
 
   // ---------------------(2)Muda cor do menu quando clicado---------------------//
-  const headerRef = useRef<HTMLHeadingElement>(null);// cria uma referencia para identificar o header
+  const headerRef = useRef(null);
 
-  useEffect(() => { // ao mover deixa o fundo do menu mais escuro
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         headerRef.current.classList.add('bg-zinc-900', 'py-4');
@@ -25,7 +31,11 @@ function Header() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);// adiciona o evento na janela toda
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   // ---------------------Fim Muda cor do menu quando clicado---------------------//
@@ -33,43 +43,32 @@ function Header() {
   return (
     <div className="bg-zinc-800 h-screen w-full">
       <header
-        ref={ headerRef }// (2)marca esse elemento como headerRef
-        className="fixed w-full flex justify-between items-center px-8 py-8
-        transition duration-300 ease-in-out"
+        ref={ headerRef }
+        className="fixed w-full flex justify-between items-center px-8 py-8 transition duration-300 ease-in-out"
       >
         <p className="text-orange-500 text-2xl font-extrabold">logo</p>
         <nav className="text-white flex gap-4">
-          <a
-            href="#"
-            className={ `hover:text-orange-500 ${linkActive === 'sobre' ? 'text-orange-500' : ''}` }
-            onClick={ handleClick('sobre') }
+          <Link
+            to="/"
+            className={ `hover:text-orange-500 ${linkActive === '' ? 'text-orange-500' : ''}` }
           >
             Sobre
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/habilidades"
             className={ `hover:text-orange-500 ${linkActive === 'habilidades' ? 'text-orange-500' : ''}` }
-            onClick={ handleClick('habilidades') }
           >
             Habilidades
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/projetos"
             className={ `hover:text-orange-500 ${linkActive === 'projetos' ? 'text-orange-500' : ''}` }
-            onClick={ handleClick('projetos') }
           >
             Projetos
-          </a>
-          <a
-            href="#"
-            className={ `hover:text-orange-500 ${linkActive === 'sim' ? 'text-lime-400' : ''}` }
-            onClick={ handleClick('sim') }
-          >
-            Sim
-          </a>
+          </Link>
         </nav>
       </header>
-      <div className="h-full bg-black flex items-center justify-center px-8 gap-8 ">
+      <div className="h-full bg-black flex items-center justify-center px-8 gap-8">
         <div className="text-white" id="dados-criador">
           <h1 className="text-6xl font-bold" id="nome">Rafael Nunes</h1>
           <p className="text-2xl text-orange-500" id="profissao">Programador Front End</p>
@@ -83,10 +82,8 @@ function Header() {
               Github
             </a>
           </div>
-
         </div>
         <ProfilePic />
-
       </div>
     </div>
   );
