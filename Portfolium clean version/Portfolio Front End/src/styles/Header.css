@@ -1,0 +1,190 @@
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* Começa Header pai e degrade branco */
+
+.header-pai{
+  background-color: rgb(187, 237, 255);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; /* Garante que os elementos não ultrapassem a área visível */
+  z-index: -1;
+}
+
+.header-pai::before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  height: 30%;
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.907) 60%);
+
+  z-index: 1; /* Garante que o degradê esteja acima dos elementos dos dandelions */
+}
+/* Termina Header pai e degrade branco */
+
+
+
+/* Começa titulo e subtítulo do Header */
+
+.titulo-pai{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.titulo-pai h1{
+  font: 700 8rem 'Rubik Mono One', sans-serif;
+  font-size: 8rem;
+  letter-spacing: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 1.5rem #00000060;
+}
+
+.header-pai h2{
+  font: 700 1.2rem 'Rubik Mono One', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  color: #000000;
+  text-shadow: 0 0 0.5rem #00000060;
+}
+
+hr{
+  width: 85%;
+  border-top: 0.2rem solid #000000;,
+  margin-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .titulo-pai h1{
+    font-size: 6rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .header-pai h2{
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+
+  hr{
+    width: 90%;
+  }
+}
+
+/* Fim titulo e subtítulo do Header */
+
+
+/* Começa Dandelions da base*/
+.dandelionBaseA, .dandelionBaseB, .dandelionBaseC, .dandelionBaseD, .dandelionBaseE, .dandelionBaseF,.dandelionBaseG,.dandelionBaseH{
+  width: 40%;
+  position: absolute;
+  top: 25rem;
+
+}
+
+.dandelionBaseA, .dandelionBaseC, .dandelionBaseE, .dandelionBaseG{
+  animation: sway 5s ease-in-out infinite;
+}
+
+.dandelionBaseB, .dandelionBaseD, .dandelionBaseF, .dandelionBaseH{
+  animation: sway 7s ease-in-out infinite;
+}
+
+.dandelionBaseB{
+  left: 9rem;
+}
+
+.dandelionBaseC{
+  left: 48rem;
+}
+
+.dandelionBaseD{
+  left: 57rem;
+}
+
+.dandelionBaseE{
+  left: 68rem;
+}
+
+.dandelionBaseF{
+  left: 77rem;
+}
+
+.dandelionBaseG{
+  left: 97rem;
+}
+
+.dandelionBaseH{
+  left: 107rem;
+}
+
+ @media (max-width: 768px) {
+  .dandelionBaseA, .dandelionBaseB, .dandelionBaseC, .dandelionBaseD, .dandelionBaseE, .dandelionBaseF,.dandelionBaseG,.dandelionBaseH{
+    width:80%;
+  }
+  .dandelionBaseB{
+    left: 4.5rem;
+  }
+
+    .dandelionBaseC{
+    left: 8.5rem;
+  }
+
+    .dandelionBaseD{
+    left: 12.5rem;
+  }
+
+
+
+  .dandelionBaseG, .dandelionBaseH, .dandelionBaseF , .dandelionBaseE{
+    display: none;
+  }
+
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-0%) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateX(-0%) rotate(1.5deg);
+  }
+  100% {
+    transform: translateX(-0%) rotate(-1.5deg);
+  }
+}
+
+/* Termina Dandelions da base*/
+
+
+/* Começa Nuvens */
+
+.nuvemA, .nuvemB{
+  width: 150rem;
+  position: absolute;
+  top: 5rem;
+  left: 10rem;
+  animation: moveClouds 160s linear infinite;
+  animation-delay: -80s;
+}
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
