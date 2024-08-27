@@ -8,7 +8,7 @@ function Projeto() {
 
   return (
     <div>
-      <h2>projeto</h2>
+      <h2>projetos</h2>
     </div>
   );
 }
