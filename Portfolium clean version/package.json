@@ -1,7 +1,8 @@
 {
-  "name": "react",
+  "name": "Portfolio de Rafael Nunes",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://raphyyyyy.github.io/Portfolium/",
   "type": "module",
   "scripts": {
     "dev": "vite",
