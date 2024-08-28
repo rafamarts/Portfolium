@@ -1,14 +1,15 @@
 {
+  "homepage": "https://raphyyyyy.github.io/Portfolium/",
   "name": "Portfolio de Rafael Nunes",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://raphyyyyy.github.io/Portfolium/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -29,10 +30,12 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
     "fast-glob": "^3.3.2",
+    "gh": "^2.8.9",
     "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "globby": "^14.0.2",
     "micromatch": "^4.0.7",
+    "pages": "^0.0.16",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.2.0",
