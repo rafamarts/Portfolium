@@ -7,8 +7,8 @@ import NotFound from '../pages/NotFound';
 const Rotas: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={ <Home /> } />
-      <Route path="/projeto" element={ <Projeto /> } />
+      <Route path="/Portfolium/" element={ <Home /> } />
+      <Route path="/Portfolium/projeto" element={ <Projeto /> } />
       <Route path="*" element={ <NotFound /> } />
     </Routes>
   );
