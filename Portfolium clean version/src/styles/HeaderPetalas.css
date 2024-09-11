@@ -1,0 +1,131 @@
+.petalasDandelion {
+  overflow: hidden;
+  width: 100%;
+}
+
+.petala1,
+.petala2,
+.petala3,
+.petala4,
+.petala5,
+.petala6,
+.petala7,
+.petala8,
+.petala9 {
+  position: absolute;
+  top: 55rem; /* Posição inicial */
+  width: 3rem;
+  z-index: 5;
+}
+
+.petala1 {
+  left: 50%; /* Centraliza horizontalmente */
+  animation: combinedMotion 12s linear infinite;
+}
+
+.petala2 {
+  left: 10%; /* Centraliza horizontalmente */
+  animation: combinedMotion 26s linear infinite;
+}
+
+.petala3 {
+  left: 25%; /* Centraliza horizontalmente */
+  animation: combinedMotion 38s linear infinite;
+}
+
+.petala4 {
+  left: 35%; /* Centraliza horizontalmente */
+  animation: combinedMotion 15s linear infinite;
+}
+
+.petala5 {
+  left: 40%; /* Centraliza horizontalmente */
+  animation: combinedMotion 25s linear infinite;
+}
+
+.petala6 {
+  left: 65%; /* Centraliza horizontalmente */
+  animation: combinedMotion 15s linear infinite;
+}
+
+.petala7 {
+  left: 70%; /* Centraliza horizontalmente */
+  animation: combinedMotion 35s linear infinite;
+}
+
+.petala8 {
+  left: 85%; /* Centraliza horizontalmente */
+  animation: combinedMotion 25s linear infinite;
+}
+
+.petala9 {
+  left: 90%; /* Centraliza horizontalmente */
+  animation: combinedMotion 35s linear infinite;
+}
+
+@keyframes combinedMotion {
+  0% {
+    transform: translate(0, 0) rotate(-10.5deg); /* Posição inicial e leve rotação */
+    opacity: 1; /* Visível */
+  }
+  50% {
+    transform: translate(10px, -32.5rem) rotate(20.5deg); /* Movimenta para o meio do caminho com leve balanço */
+    opacity: 1;
+  }
+  90% {
+    transform: translate(0, -65rem) rotate(-15.5deg); /* Sobe até o topo com balanço */
+    opacity: 0;
+  }
+  91% {
+    opacity: 0; /* Fica invisível para o teleporte */
+    transform: translate(0, 55rem) rotate(-15.5deg); /* Teleporta de volta para a posição inicial */
+  }
+  100% {
+    opacity: 0; /* Invisível até o próximo ciclo */
+    transform: translate(0, 0) rotate(-21.5deg); /* Volta à posição inicial */
+  }
+}
+
+/* Começa dust */
+
+.dust1, .dust2, .dust3, .dust4{
+  position: absolute;
+  top: 55rem;
+  width: 50rem;
+  z-index: -3;
+}
+
+.dust1{
+  left: 0;
+    animation: combinedMotion 9s linear infinite;
+}
+
+.dust2{
+  right: 25%;
+      animation: combinedMotion 11s linear infinite;
+}
+
+.dust3{
+  right: 50%;
+      animation: combinedMotion 13s linear infinite;
+}
+
+.dust4{
+  right: 75%;
+      animation: combinedMotion 15s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .dust1, .dust2, .dust3, .dust4{
+    width: 20rem;
+  }
+  .dust2{
+    right: 20%;
+  }
+  .dust3{
+    right: 40%;
+  }
+  .dust4{
+    right: 60%;
+  }
+}

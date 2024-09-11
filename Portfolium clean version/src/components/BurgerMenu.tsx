@@ -20,9 +20,10 @@ const BurgerMenu = () => {
                 <div className="menu">
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#profile">Sobre Mim</a></li>
+                        <li><a href="#skill">Habilidades</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#projects">Curriculum</a></li>
                     </ul>
                 </div>
             )}
