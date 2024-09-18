@@ -1,6 +1,6 @@
 import React from "react";
 import SkillCard from "./SkillCard";
-import habilidades from "../data/habilidades";
+import habilidades from "../data/Habilidades";
 import "../styles/Skill.css";
 
 function Skill() {
