@@ -12,7 +12,6 @@
   z-index: -1;
 }
 
-/* .menu{
-  position: fixed;
-  z-index: 2;
-} */
+html {
+  scroll-behavior: smooth;
+}

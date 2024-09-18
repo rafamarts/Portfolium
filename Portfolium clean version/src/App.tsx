@@ -1,33 +1,19 @@
-import React from "react";
+import React from 'react';
 import "./App.css";
-import Rotas from "./components/Rotas.tsx";
-import Header from "./components/Header.tsx";
-import Projetos from "./components/Projetos.tsx";
-import BurgerMenu from "./components/BurgerMenu.tsx";
-import Profile from "./components/Profile.tsx";
-import Skill from "./components/Skill.tsx";
-import FundoDandelion from "./components/FundoDandelion.tsx";
-import HeaderPetalas from "./components/HeaderPetalas";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Projeto from './pages/Projeto';
+import NotFound from './pages/NotFound';
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   return (
-    <>
-      <div className="menu">
-
-      </div>
-      <BurgerMenu />
-      <Header />
-      <HeaderPetalas />
-      <div className="fundo">
-        <FundoDandelion />
-      </div>
-      <Profile />
-      <Skill />
-      {/* <Rotas /> */}
-      {/* <Projetos/> */}
-    </>
+    <Routes>
+      <Route path="/" element={ <Home /> } />
+      <Route path="/projeto/:id" element={ <Projeto /> } />
+      <Route path="*" element={ <NotFound /> } />
+    </Routes>
   );
 }
 

@@ -1,37 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
-import projeto1 from "../assets/projeto1.jpg";
+// import projeto1 from "../assets/projeto1.jpg";
+import ProjectData from "../data/ProjectData";
+import { Link } from "react-router-dom"; 
+import "../styles/Projetos.css";
 
 function Projetos(props) {
   return (
-    <div>
-      <div
-        className="p-8 m-12 grid gap-4
-        sm:grid-cols-1
-        md:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]
-        "
-      >
-        <ProjectCard
-          projectName="Plataforma de Streaming de Dados"
-          tags={["Javascript", "Tailwind", "React"]}
-          image={projeto1}
-        />
-        <ProjectCard
-          projectName="Plataforma de Streaming de Dados"
-          tags={["Javascript", "Tailwind", "React"]}
-          image={projeto1}
-        />
-        <ProjectCard
-          projectName="Plataforma de Streaming de Dados"
-          tags={["Javascript", "Tailwind", "React"]}
-          image={projeto1}
-        />
-        <ProjectCard
-          projectName="Plataforma de Streaming de Dados"
-          tags={["Javascript", "Tailwind", "React"]}
-          image={projeto1}
-        />
+    <div className="projetos-pai" id="projects">
+      <h1>PROJETOS</h1>
+      <div>
+        <ul>
+          {ProjectData.map((projeto) => (
+            <Link key={projeto.id} to={`/projeto/${projeto.id}`}>
+            <li>
+              <ProjectCard
+                projectName={projeto.title}
+                tags={projeto.techs}
+                image={projeto.iconimage}
+                slug={projeto.id}
+              />
+            </li>
+            </Link>
+          ))}
+        </ul>
       </div>
     </div>
   );
