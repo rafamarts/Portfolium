@@ -2,11 +2,18 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ProjectData from "../data/ProjectData";
 import degrade from "../assets/Projetos/Degrade.png";
+import { useNavigate } from 'react-router-dom';
 import "../styles/Projeto.css";
+
 
 function Projeto() {
   const { id } = useParams();
   const projeto = ProjectData.find((projeto) => projeto.id === id); // Pega o projeto certo
+
+const navigate = useNavigate();
+const voltar = () => {
+  navigate(-1); // Volta para a página anterior
+};
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,6 +27,8 @@ function Projeto() {
 
   return (
     <div className="ProjetoIndPai">
+      <i className="fa-solid fa-arrow-left" onClick={voltar}></i>
+
       <div className="HeaderImageWrapper">
         <img src={degrade} className="Degrade" />
         {projeto?.headerImage && (

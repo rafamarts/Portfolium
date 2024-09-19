@@ -39,6 +39,20 @@
   z-index: 0; 
 }
 
+.ProjetoIndPai i{
+  font-size: 5rem;
+  color: #ffffff;
+  top: 5rem;
+  left: 5rem;
+  position: absolute;
+  z-index: 15;
+  cursor: pointer;
+}
+
+.ProjetoIndPai i:hover{
+  color: #37c0e6;
+}
+
 /* fim header */
 
 /* texto */
@@ -177,5 +191,13 @@
   object-fit: cover; /* Garante que a imagem cubra toda a área */
   z-index: 1; 
 }
+.ProjetoIndPai i{
+  font-size: 3rem;
+  color: #ffffff;
+  top: 2rem;
+  left: 2rem;
+  position: absolute;
+  z-index: 15;
+  cursor: pointer;}
   
 }
