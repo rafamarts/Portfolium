@@ -13,7 +13,7 @@
   position: absolute;
   writing-mode: vertical-rl; 
   transform: translateX(170%) translateY(7%) rotate(180deg); 
-  left: -18rem; 
+  left: 0rem; 
   top: 10rem; 
   margin: 0; 
   font-size: 2vw;
@@ -37,9 +37,9 @@
     width: 100%;
     font-size: 3.5rem;
     text-wrap: nowrap;
-    right: -20rem;
-    /* left: 0.01rem; */
+    right: 5rem;
+    left: 0.11rem;
     top: -8.9rem; 
-    transform: translateX(30%) translateY(1%) rotate(180deg); 
+    transform: translateX(-5%) translateY(1%) rotate(180deg); 
   }
 }
