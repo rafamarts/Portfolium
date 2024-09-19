@@ -8,6 +8,11 @@ function Projeto() {
   const { id } = useParams();
   const projeto = ProjectData.find((projeto) => projeto.id === id); // Pega o projeto certo
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // isso faz com que a pagina comece no topo e não em baixo
+
   const image1 = projeto?.image1;
   const image2 = projeto?.image2;
   const image3 = projeto?.image3;
