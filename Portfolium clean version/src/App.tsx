@@ -1,6 +1,7 @@
 import React from 'react';
 import "./App.css";
-import { Routes, Route } from 'react-router-dom';
+// import { Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Importar HashRouter e Routes
 import Home from './pages/Home';
 import Projeto from './pages/Projeto';
 import NotFound from './pages/NotFound';
