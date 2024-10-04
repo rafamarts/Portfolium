@@ -1,6 +1,7 @@
 .petalasDandelion {
   overflow: hidden;
-  width: 100%;
+  height: auto;
+  width: 100vw;
 }
 
 .petala1,
