@@ -91,7 +91,7 @@
 
 .dust1, .dust2, .dust3, .dust4{
   position: absolute;
-  top: 55rem;
+  top: 30rem;
   width: 50rem;
   z-index: -3;
 }

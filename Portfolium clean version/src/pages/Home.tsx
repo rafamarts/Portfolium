@@ -35,9 +35,9 @@ function Home() {
         </div>
       </FadeWrapper>
 
-      <FadeWrapper>
+      {/* <FadeWrapper> */}
         <Profile />
-      </FadeWrapper>
+      {/* </FadeWrapper> */}
 
       <FadeWrapper>
         <Skill />
