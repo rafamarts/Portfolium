@@ -93,13 +93,17 @@ hr{
 /* Fim titulo e subtítulo do Header */
 
 
-/* Animação de fade-out do Header */
-.header-hidden {
+
+
+/* Animação de fade-in */
+.fade-in {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  animation: fadeIn 5s forwards; 
 }
 
-.header-visible {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
+/* fim da animação de fade-in */

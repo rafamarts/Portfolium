@@ -6,6 +6,10 @@ import { useNavigate } from 'react-router-dom';
 import "../styles/Projeto.css";
 
 
+import "../App.css";
+import FadeWrapper from "../components/FadeWrapper.tsx";
+
+
 function Projeto() {
   const { id } = useParams();
   const projeto = ProjectData.find((projeto) => projeto.id === id); // Pega o projeto certo
@@ -39,10 +43,10 @@ const voltar = () => {
           />
         )}
       </div>
-
+      <FadeWrapper>
       <h1>{projeto?.title}</h1>
       <h2>{projeto?.title}</h2>
-
+</FadeWrapper>
       <p className="ProjDescricao">{projeto?.description}</p>
 
       <div name="Proj-div-tags" className="Proj-div-tags">
