@@ -22,7 +22,7 @@ const BurgerMenu = () => {
         <div className={`line ${isOpen ? "open" : ""}`}></div>
         <div className={`line ${isOpen ? "open" : ""}`}></div>
       </motion.div>
- 
+
       {isOpen && (
         <motion.div
           animate={{
@@ -50,7 +50,13 @@ const BurgerMenu = () => {
               <a href="#projects">Projetos</a>
             </li>
             <li>
-              <a href="#projects">Curriculum</a>
+              <a
+                href="https://github.com/Raphyyyyy/Portfolio/blob/35f596f086bc9f3b5dd1ef87b264a1a899d474ed/Curriculum%20Rafael%20Nunes.pdf?raw=true"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Curriculum
+              </a>
             </li>
           </ul>
         </motion.div>

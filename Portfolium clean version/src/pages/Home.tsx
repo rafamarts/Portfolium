@@ -35,13 +35,13 @@ function Home() {
         </div>
       </FadeWrapper>
 
-      {/* <FadeWrapper> */}
+ {/* <FadeWrapper>  */}
         <Profile />
-      {/* </FadeWrapper> */}
+ {/* </FadeWrapper>  */}
 
-      <FadeWrapper>
+      {/* <FadeWrapper> */}
         <Skill />
-      </FadeWrapper>
+      {/* </FadeWrapper> */}
 
       <Projetos />
     </div>
