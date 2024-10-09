@@ -13,7 +13,7 @@ const FadeWrapper: React.FC<FadeWrapperProps> = ({ children }) => {
     if (wrapperRef.current) {
       const rect = wrapperRef.current.getBoundingClientRect();
       // const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-          const isInViewport = rect.bottom > window.innerHeight && rect.top* 0.2 < window.innerHeight;//muda a visibilidade quando desce 20% da pagina
+          const isInViewport = rect.bottom > window.innerHeight && rect.top* 0.8 < window.innerHeight;//muda a visibilidade quando desce 20% da pagina
 
       setIsVisible(isInViewport);
     }
