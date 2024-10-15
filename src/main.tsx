@@ -8,7 +8,7 @@ console.log(basename);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename="/Portfolium">
       <App />
     </BrowserRouter>
 
