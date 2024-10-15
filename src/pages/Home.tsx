@@ -6,7 +6,7 @@ import BurgerMenu from "../components/BurgerMenu.tsx";
 import Profile from "../components/Profile.tsx";
 import Skill from "../components/Skill.tsx";
 import FundoDandelion from "../components/FundoDandelion.tsx";
-import HeaderPetalas from "../components/HeaderPetalas";
+import HeaderPetalas from "../components/HeaderPetalas.tsx";
 import FadeWrapper from "../components/FadeWrapper.tsx";
 
 function Home() {

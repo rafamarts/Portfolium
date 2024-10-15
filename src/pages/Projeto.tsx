@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ProjectData from "../data/ProjectData";
+import ProjectData from "../data/ProjectData.ts";
 import degrade from "../assets/Projetos/Degrade.png";
 import { useNavigate } from 'react-router-dom';
 import "../styles/Projeto.css";
