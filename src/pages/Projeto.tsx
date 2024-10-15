@@ -49,7 +49,7 @@ const voltar = () => {
 </FadeWrapper>
       <p className="ProjDescricao">{projeto?.description}</p>
 
-      <div name="Proj-div-tags" className="Proj-div-tags">
+      <div className="Proj-div-tags">
         <p>
           {projeto?.techs.map((tag) => (
             <span key={tag}>{tag}</span>
