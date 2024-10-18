@@ -1,17 +1,22 @@
-import React from 'react'
-import ProfilePic from './ProfilePic'
-import ProfileBox from './ProfileBox'
-import '../styles/Profile.css'
+import React from "react";
+import ProfilePic from "./ProfilePic";
+import ProfileBox from "./ProfileBox";
+import "../styles/Profile.css";
+import { motion } from "framer-motion";
+import BackgroundText from "./BackgroundText";
 
 function Profile() {
   return (
-    <div className='profile-pai' id='profile'>
-      <div className="sobreMim"><h1>SOBRE MIM</h1></div>
+    <div className="profile-pai" id="profile">
+      <BackgroundText texto="SOBREMIM"/>
+      <div className="sobreMim">
+        <h1>SOBRE MIM</h1>
+      </div>
       <div className="ProfileDiv">
-      <ProfileBox/>
+        <ProfileBox />
       </div>
     </div>
-  )
+  );
 }
 
-export default Profile
+export default Profile;

@@ -17,9 +17,8 @@
 .conteiner-card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: #f1f1f1e2;
-  width: 26rem;
-  height: 26rem;
-  transition: all 0.3s ease;
+ transform: scale(1.04);
+  transition: all 1.3s ease;
 }
 
 .conteiner-card img {
@@ -38,17 +37,17 @@
   font-weight: bolder;
   color: rgb(28, 72, 142);
   margin: 0;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 .div-tags span {
   font-size: 1rem;
   font-weight: bolder;
-  color: rgb(28, 72, 142);
+  color: #ffffff;
   margin-right: 1rem;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
-  background-color: #3ddbff86;
+  background-color: rgb(28, 72, 142);
 }
 
 .botao-card button {
@@ -56,19 +55,55 @@
   justify-self: center;
   font-size: 1.5rem;
   margin-top: 2rem;
-  color: rgb(28, 72, 142);
-  background-color: #3ddbff86;
+  color: #ffffff;
+  background-color: rgb(28, 72, 142);
   border: none;
   width: 100vw;
   font-weight: bolder;
   line-height: 4rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .botao-card button:hover {
-  color: #0800ff;
-  font-size: 1.7rem;
-  background-color: #3ddbff;
-  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+  background-color: rgb(53, 130, 255);
+  transition: all 1.3s ease;
   padding-bottom: 1.5rem;
+
+}
+
+@media screen and (max-width: 768px) {
+.conteiner-card {
+  width: 10rem;
+  height: 12rem;
+  padding-bottom: 0.1rem;
+  
+}
+
+.conteiner-card img{
+  width: 10rem;
+  height: 100%;
+  max-height: 5rem;
+}
+
+.div-tags h2{
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.div-tags span{
+  font-size: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.2rem;
+}
+
+.botao-card button{
+  font-size: 0.5rem;
+  line-height: 2rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  width: 10rem;
+  
+}
+
 }

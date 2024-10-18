@@ -3,17 +3,23 @@ import PropTypes from "prop-types";
 import ProjectCard from "./ProjectCard";
 // import projeto1 from "../assets/projeto1.jpg";
 import ProjectData from "../data/ProjectData";
+import ImageWrapper from "./ImageWrapper";
 import { Link } from "react-router-dom"; 
+import { motion } from "framer-motion";
 import "../styles/Projetos.css";
+import BackgroundText from './BackgroundText';
 
 function Projetos(props) {
   return (
     <div className="projetos-pai" id="projects">
       <h1>PROJETOS</h1>
+
+      <BackgroundText texto="PROJETOS"/>
       <div>
         <ul>
-          {ProjectData.map((projeto) => (
-            <Link key={projeto.id} to={`/projeto/${projeto.id}`}>
+          {ProjectData.map((projeto, index) => (
+            <ImageWrapper key={projeto.id} style={{ borderRadius: '10%' }} delay={(index+1)*0.2}>
+            <Link to={`/projeto/${projeto.id}`}>
             <li>
               <ProjectCard
                 projectName={projeto.title}
@@ -23,6 +29,7 @@ function Projetos(props) {
               />
             </li>
             </Link>
+            </ImageWrapper>
           ))}
         </ul>
       </div>

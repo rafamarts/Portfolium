@@ -35,14 +35,8 @@ function Home() {
         </div>
       </FadeWrapper>
 
- {/* <FadeWrapper>  */}
         <Profile />
- {/* </FadeWrapper>  */}
-
-      {/* <FadeWrapper> */}
         <Skill />
-      {/* </FadeWrapper> */}
-
       <Projetos />
     </div>
   );

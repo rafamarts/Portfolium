@@ -62,7 +62,7 @@
   color: rgb(255, 255, 255);
   text-shadow: #000000a1 0.1rem 0.1rem 0.2rem;
   margin-left: 10%;
-  z-index: 2;
+  z-index: 10;
 }
 
 .ProjetoIndPai h2 {
@@ -191,6 +191,11 @@
   object-fit: cover; /* Garante que a imagem cubra toda a área */
   z-index: 1; 
 }
+
+.ProjetoIndPai{
+  overflow: hidden;
+}
+
 .ProjetoIndPai i{
   font-size: 3rem;
   color: #ffffff;
@@ -198,6 +203,21 @@
   left: 2rem;
   position: absolute;
   z-index: 15;
-  cursor: pointer;}
+  cursor: pointer;
+}
+.Projeto-Botao button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  }
+
+  .HeaderImageWrapper{
+    width: auto;
+    height: 40vh;
+  }
+
+  .ProjetoIndPai h2 {
+    top: 40%; 
+  }
+
   
 }

@@ -28,6 +28,7 @@
   z-index: -1; /* Fica atrás dos textos e da foto */
 }
 
+
 .foto-perfil {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -114,17 +115,6 @@
   height: 4.5rem;
 }
 
-.mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(28, 72, 142);
-  opacity: 1;
-  pointer-events: none;
-  border-radius: 50%;
-}
 
 @media screen and (max-width: 768px) {
   .container {

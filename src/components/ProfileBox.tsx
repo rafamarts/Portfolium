@@ -5,6 +5,7 @@ import github from "../assets/icones/github-logo.png";
 import linkedin from "../assets/icones/linkedin_logo_icon_147268.png";
 import curriculum from "../assets/icones/curriculum1.png";
 import { motion } from "framer-motion";
+import ImageWrapper from "./ImageWrapper";
 
 function ProfileBox() {
   return (
@@ -23,40 +24,17 @@ function ProfileBox() {
         className="background"
       ></motion.div>
       {/*fundo azul */}
-      <div className="image-container">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            scale: [0.5, 1.3, 1],
-            opacity: [0, 1],
-          }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-          }}
-        >
+
+
+      <ImageWrapper style={{ borderRadius: '50%' }}>
           {/* Imagem do perfil */}
           <img
             src={foto}
             alt="foto de desenvolvedor front end"
             className="foto-perfil"
           />
+      </ImageWrapper>
 
-          {/* Máscara */}
-          <motion.div
-            className="mask"
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: [1, 0],
-            }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-              delay: 0.5, // Atraso antes de começar
-            }}
-          />
-        </motion.div>
-      </div>
 
       <motion.div
         className="mask"
