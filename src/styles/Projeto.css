@@ -7,6 +7,7 @@
 .ProjetoIndPai{
   background-color: #88e1f5;
   width: 100%;
+  height: auto;
 }
 
 
@@ -194,6 +195,7 @@
 
 .ProjetoIndPai{
   overflow: hidden;
+  height: auto;
 }
 
 .ProjetoIndPai i{
