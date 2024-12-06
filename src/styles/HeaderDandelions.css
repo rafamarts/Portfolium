@@ -1,0 +1,169 @@
+/* Ordem de linhas */
+.linha1 {
+  position: absolute;
+  width: 100%;
+  bottom: 70rem;
+  z-index: -1;
+}
+
+.linha2 {
+  position: absolute;
+  width: 100%;
+  bottom: 75rem;
+  left: 5rem;
+  z-index: -2;
+}
+.linha3 {
+  position: absolute;
+  width: 100%;
+  bottom: 80rem;
+  z-index: -3;
+}
+
+.linha4 {
+  position: absolute;
+  width: 100%;
+  bottom: 95rem;
+  z-index: -4;
+}
+
+@media screen and (max-width: 768px) {
+  .linha2 {
+    width: 130%;
+    bottom: 60rem;
+    left: 5rem;
+  }
+  .linha3 {
+    width: 130%;
+    bottom: 65rem;
+    right: 5rem;
+  }
+  .linha4 {
+    width: 130%;
+    bottom: 70rem;
+  }
+}
+
+/* Fim ordem de linhas */
+
+/* _______________________________________________________________________________*/
+
+/* Começa Dandelions da base*/
+.dandelionBaseA,
+.dandelionBaseB,
+.dandelionBaseC,
+.dandelionBaseD,
+.dandelionBaseE,
+.dandelionBaseF,
+.dandelionBaseG,
+.dandelionBaseH {
+  width: 40%;
+  position: absolute;
+  top: 25rem;
+}
+
+.dandelionBaseA,
+.dandelionBaseC,
+.dandelionBaseE,
+.dandelionBaseG {
+  animation: sway 8s ease-in-out infinite;
+}
+
+.dandelionBaseB,
+.dandelionBaseD,
+.dandelionBaseF,
+.dandelionBaseH {
+  animation: sway 10s ease-in-out infinite;
+}
+
+.dandelionBaseB {
+  left: 9rem;
+}
+
+.dandelionBaseC {
+  left: 48rem;
+}
+
+.dandelionBaseD {
+  left: 57rem;
+}
+
+.dandelionBaseE {
+  left: 68rem;
+}
+
+.dandelionBaseF {
+  left: 77rem;
+}
+
+.dandelionBaseG {
+  left: 97rem;
+}
+
+.dandelionBaseH {
+  left: 107rem;
+}
+
+@media (max-width: 768px) {
+  .dandelionBaseA,
+  .dandelionBaseB,
+  .dandelionBaseC,
+  .dandelionBaseD,
+  .dandelionBaseE,
+  .dandelionBaseF,
+  .dandelionBaseG,
+  .dandelionBaseH {
+    width: 150%;
+    /* top: 1rem; */
+  }
+
+  .linha1 {
+    bottom: 60rem;
+  }
+  .linha2 {
+    bottom: 73rem;
+  }
+
+  .linha3 {
+    bottom: 72rem;
+  }
+
+  .linha4 {
+    bottom: 87rem;
+  }
+
+  .dandelionBaseB {
+    right: 90%;
+  }
+
+  .dandelionBaseC {
+    left: 18.5rem;
+  }
+
+  .dandelionBaseD {
+    left: 12.5rem;
+  }
+
+  .dandelionBaseG,
+  .dandelionBaseH,
+  .dandelionBaseF,
+  .dandelionBaseE {
+    /* display: none; */
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-0%) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateX(-0%) rotate(1.5deg);
+  }
+  100% {
+    transform: translateX(-0%) rotate(-1.5deg);
+  }
+}
+
+/* Termina Dandelions da base*/
+
+/* _______________________________________________________________________________*/

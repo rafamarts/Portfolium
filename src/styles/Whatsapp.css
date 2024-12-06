@@ -1,0 +1,12 @@
+.whats img:hover {
+    transform: scale(1.9);
+}
+.whats img {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    width: 50px;
+    z-index: 1000;
+    transition: transform 1s ease-in-out;
+}

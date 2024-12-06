@@ -1,0 +1,88 @@
+.SkillDiv {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 2rem;
+  width: 65%;
+  height: 65%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+li {
+  margin: 1rem;
+}
+
+.SkillDiv h1 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  transform: translateX(170%) translateY(7%) rotate(180deg);
+  left: 0;
+  top: 0;
+  margin: 0;
+  font-size: 5vw;
+  font-family: "Archivo Black", sans-serif;
+  color: rgb(28, 72, 142);
+}
+
+.UlDiv {
+  position: absolute;
+  top: 7rem;
+}
+
+.background_projetos {
+  top: 0; 
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+ .SkillDiv {
+    height: 100%;
+  }
+
+
+  ul {
+    width: 90%;
+  }
+
+  .SkillDiv h1  {
+
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg); 
+    line-height: 2rem; 
+    font-size: 5rem;
+    right: 0; 
+    top: 0; 
+    transform: translateX(3%) translateY(5%) rotate(180deg); 
+    z-index: -1;
+  }
+
+  .UlDiv {
+    top: 0;
+    left: 2rem;
+  }
+
+    ul {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+
+  }
+
+  .background_projetos {
+    top: 0; 
+    left: 0;
+    height: 83.3vh;
+  }
+}
