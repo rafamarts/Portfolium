@@ -8,6 +8,7 @@ import Skill from "../components/Skill.tsx";
 import FundoDandelion from "../components/FundoDandelion.tsx";
 import HeaderPetalas from "../components/HeaderPetalas";
 import FadeWrapper from "../components/FadeWrapper.tsx";
+import Whatsapp from "../components/Whatsapp.tsx";
 
 function Home() {
 
@@ -34,7 +35,7 @@ function Home() {
           <FundoDandelion />
         </div>
       </FadeWrapper>
-
+        <Whatsapp/>
         <Profile />
         <Skill />
       <Projetos />
