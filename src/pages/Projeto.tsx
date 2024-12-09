@@ -1,73 +1,78 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import ProjectData from "../data/ProjectData";
+import { useParams, useNavigate } from "react-router-dom";
+import { useProjects } from "../context/ProjectContext";
 import degrade from "../assets/Projetos/Degrade.png";
-import { useNavigate } from 'react-router-dom';
 import "../styles/Projeto.css";
-
-
 import "../App.css";
-import FadeWrapper from "../components/FadeWrapper.tsx";
-
 
 function Projeto() {
-  const { id } = useParams();
-  const projeto = ProjectData.find((projeto) => projeto.id === id); // Pega o projeto certo
+  const { slug } = useParams(); // Pega o parâmetro slug da URL
+  const projectData = useProjects(); // Pega os dados do contexto
 
-const navigate = useNavigate();
-const voltar = () => {
-  navigate(-1); // Volta para a página anterior
-};
+  // Certifique-se de acessar a estrutura correta dos dados
+  const projeto = projectData.find((projeto) => projeto.slug === slug); // Pega o projeto certo
+  console.table(projectData);
+
+  const navigate = useNavigate();
+  const voltar = () => {
+    navigate(-1); // Volta para a página anterior
+  };
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-  // isso faz com que a pagina comece no topo e não em baixo
+  }, []); // Faz a página começar no topo
 
-  const image1 = projeto?.image1;
-  const image2 = projeto?.image2;
-  const image3 = projeto?.image3;
-  const image4 = projeto?.image4;
+  if (!projeto) {
+    return <div>Projeto não encontrado</div>; // Mostra mensagem se o projeto não for encontrado
+  }
+
+  const image1 = projeto.metadata?.image1;
+  const image2 = projeto.metadata?.image2;
+  const image3 = projeto.metadata?.image3;
+  const image4 = projeto.metadata?.image4;
 
   return (
     <div className="ProjetoIndPai">
       <i className="fa-solid fa-arrow-left" onClick={voltar}></i>
 
       <div className="HeaderImageWrapper">
-        <img src={degrade} className="Degrade" />
-        {projeto?.headerImage && (
+        <img src={degrade} className="Degrade" alt="Degrade" />
+        {projeto.metadata?.headerimage && (
           <img
-            src={projeto.headerImage}
+            src={projeto.metadata.headerimage}
             className="HeaderImage"
             alt={projeto.title}
           />
         )}
       </div>
 
-      <h1>{projeto?.title}</h1>
-      <h2>{projeto?.title}</h2>
+      <h1>{projeto.title}</h1>
+      <h2>{projeto.title}</h2>
 
-      <p className="ProjDescricao">{projeto?.description}</p>
+      <p className="ProjDescricao"
+      dangerouslySetInnerHTML={{ __html: projeto.metadata?.description || "" }}
+      />
+        
+
 
       <div name="Proj-div-tags" className="Proj-div-tags">
         <p>
-          {projeto?.techs.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
+          {projeto.metadata?.techs ? projeto.metadata.techs.split(',').map((tag) => (
+            <span key={tag.trim()}>{tag.trim()}</span>
+          )) : <span>Nenhuma tecnologia listada</span>}
         </p>
       </div>
 
       <div
         className="ProjDescricaoFull"
-        dangerouslySetInnerHTML={{ __html: projeto?.fullDescription || "" }}
+        dangerouslySetInnerHTML={{ __html: projeto.metadata?.fulldescription || "" }}
       />
-      {/* dangerouslySetInnerHTML faz com que o HTML apareça ex <br> */}
 
       <div className="Projeto-Botao">
-        <a href={projeto?.linkSite} target="_blank" rel="noopener noreferrer">
+        <a href={projeto.metadata?.linkSite} target="_blank" rel="noopener noreferrer">
           <button>Ver site</button>
         </a>
-        <a href={projeto?.linkCode} target="_blank" rel="noopener noreferrer">
+        <a href={projeto.metadata?.linkCode} target="_blank" rel="noopener noreferrer">
           <button>Ver código</button>
         </a>
       </div>

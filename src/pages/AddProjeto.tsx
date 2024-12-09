@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import autenticador from '../components/autenticador';
-import { addProjetos } from '../services/api';
+// import { addProjetos } from '../services/api';
 import '../styles/AddProjeto.css';
 
 function AddProjeto() {
