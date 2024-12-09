@@ -12,6 +12,7 @@
   box-shadow: 0 0 70px rgba(0, 0, 0, 0.48);
   background-color: #ffffff;
   font-family: "Archivo Black", sans-serif;
+  cursor: pointer;
 }
 
 .conteiner-card:hover {
@@ -33,6 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .div-tags h2 {
@@ -66,6 +68,7 @@
   font-weight: bolder;
   line-height: 4rem;
   padding-bottom: 2rem;
+  cursor: pointer;
 }
 
 .botao-card button:hover {

@@ -12,19 +12,6 @@ import Whatsapp from "../components/Whatsapp.tsx";
 
 function Home() {
 
-// Desabilitar o scroll ao carregar e reabilita em 7 segundos
-  const [scrollEnabled, setScrollEnabled] = useState(false);
-
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    const timer = setTimeout(() => {
-      setScrollEnabled(true);
-      document.body.style.overflow = "auto"; // Habilita o scroll
-    }, 6000);
-    return () => clearTimeout(timer); 
-  }, []);
-//--------------------------------------------------------------
-
   return (
     <div className="home-pai">
       <BurgerMenu />
@@ -35,7 +22,7 @@ function Home() {
           <FundoDandelion />
         </div>
       </FadeWrapper>
-        <Whatsapp/>
+        <Whatsapp />
         <Profile />
         <Skill />
       <Projetos />

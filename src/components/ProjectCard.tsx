@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/ProjectCard.css";
 
 type CardsProps = {
@@ -23,9 +24,9 @@ function ProjectCard({ projectName, tags, slug, image }: CardsProps) {
           </p>
         </div>
         <div name="botao-card" className="botao-card">
-          <a href={`/${slug}`}>
+          <Link to={`projeto/${slug}`}>
             <button>Ver mais</button>
-          </a>
+          </Link>
         </div>
       </div>
 

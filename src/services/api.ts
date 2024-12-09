@@ -1,43 +1,7 @@
-// projetos.ts
-const APIurl = 'http://localhost:5000';
+const Projetos_url = "https://api.cosmicjs.com/v3/buckets/portfolium-clean-version-production/objects?pretty=true&query=%7B%22type%22:%22projetos%22%7D&limit=100&skip=0&read_key=6z1OfS3LervJJiuGb5O4sALllzF3gtHsrPS8lP8NH0nw3b7KIC&depth=1&props=slug,title,metadata,type,"
 
-interface Projeto {
-  id: string;
-  title: string;
-  description: string;
-  fullDescription: string;
-  iconimage: string;
-  image1: string;
-  image2: string;
-  image3: string;
-  image4: string;
-  headerImage: string;
-  techs: string[];
-  linkSite: string;
-  linkCode: string;
+export async function getProjetos() {
+  const response = await fetch(Projetos_url);
+  const data = await response.json();
+  return data.objects;
 }
-
-// Função para buscar os dados dos projetos na API
-export const fetchProjetos = async (): Promise<Projeto[]> => {
-  const response = await fetch(`${APIurl}/projetos`);
-  const projects: Projeto[] = await response.json();
-  return projects;
-};
-
-// Função para adicionar um novo projeto
-export const addProjetos = async (projeto: Projeto): Promise<Projeto> => {
-  const response = await fetch(`${APIurl}/projetos`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(projeto),
-  });
-
-  if (!response.ok) {
-    throw new Error('Erro ao adicionar projeto');
-  }
-
-  const data: Projeto = await response.json();
-  return data;
-};
